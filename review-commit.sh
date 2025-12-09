@@ -28,7 +28,7 @@ if ! git cat-file -e "$COMMIT^{commit}" 2>/dev/null; then
   exit 1
 fi
 
-git show --no-color --no-pager "$COMMIT" | cline -y "Review this commit for:
+git --no-pager show --no-color "$COMMIT" | cline -y "Review this commit for:
 1. Potential bugs
 2. Security issues
 3. Code quality improvements
